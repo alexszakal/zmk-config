@@ -87,7 +87,7 @@ ZMK_UNICODE_PAIR(hu_u_dblacute,     N0, N1, N7, N1, N0, N1, N7,N0)  // ű/Ű
             bhm: balanced_homerow_mods {
                 compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
-                tapping-term-ms = <200>;    // <---[[moderate duration]]
+                tapping-term-ms = <250>;    // <---[[moderate plus duration]]
                 quick-tap-ms = <200>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
