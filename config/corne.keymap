@@ -30,60 +30,70 @@ ZMK_UNICODE_PAIR(hu_u_dblacute,     N0, N1, N7, N1, N0, N1, N7,N0)  // ű/Ű
             combo_a_acute {
                 timeout-ms = <50>;
                 key-positions = <13 14>;
+                layers = <0>;
                 bindings = <&hu_a_acute>;
             };
 
             combo_e_acute {  // ÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉ
                 timeout-ms = <50>;
                 key-positions = <3 4>;
+                layers = <0>;
                 bindings = <&hu_e_acute>;
             };
 
             combo_i_acute {  // ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
                 timeout-ms = <50>;
                 key-positions = <8 9>;
+                layers = <0>;
                 bindings = <&hu_i_acute>;
             };
 
             combo_o_acute { // ÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓ
                 timeout-ms = <50>;
                 key-positions = <9 10>;
+                layers = <0>;
                 bindings = <&hu_o_acute>;
             };
 
             combo_o_umlaut { // ÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖ
                 timeout-ms = <50>;
                 key-positions = <9 19>;
+                layers = <0>;
                 bindings = <&hu_o_umlaut>;
             };
 
             combo_o_dblacute { // ŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐ
                 timeout-ms = <50>;
                 key-positions = <9 21>;
+                layers = <0>;
                 bindings = <&hu_o_dblacute>;
             };
 
             combo_u_acute { // ÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚ
                 timeout-ms = <50>;
                 key-positions = <7 8>;
+                layers = <0>;
                 bindings = <&hu_u_acute>;
             };
 
             combo_u_umlaut { // ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
                 timeout-ms = <50>;
                 key-positions = <7 21>;
+                layers = <0>;
                 bindings = <&hu_u_umlaut>;
             };
 
             combo_u_dblacute { // ŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰ
                 timeout-ms = <50>;
                 key-positions = <7 19>;
+                layers = <0>;
                 bindings = <&hu_u_dblacute>;
             };
 /////////////////  SOFT OFF  //////////////////////////////
             combo_soft_off { // Soft off
                 timeout-ms = <50>;
                 key-positions = <36 38>;
+                layers = <0>;
                 bindings = <&soft_off>;
             };
         };
