@@ -139,7 +139,7 @@
 //                    | ESC | SPC | TAB |   | ENT | BKSP  | DEL |
                         bindings = <
    &kp TAB     &kp Q            &kp W         &kp E          &kp R       &kp T             &kp Y      &kp U            &kp I          &kp O              &kp P       &kp BSPC
-   &kp LCTRL   &phm LGUI A   &bhm LALT S   &bhm LCTRL D      &kp F       &kp G             &kp H   &bhm RSHIFT J    &bhm RCTRL K    &bhm RALT L     &phm LGUI SEMI   &kp SQT
+   &kp LCTRL   &kp A            &kp S         &kp D          &kp F       &kp G             &kp H      &kp J            &kp K          &kp L            &kp SEMI      &kp SQT
    &kp LSHFT   &kp Z            &kp X         &kp C          &kp V       &kp B             &kp N      &kp M          &kp COMMA        &kp DOT          &kp FSLH      &kp ESC
                   &ltc 4 ESC  &ltc 1 SPC  &ltc 2 TAB                                        &ltc 3 RET &ltc 5 BSPC &ltc 6 DEL
                         >;
