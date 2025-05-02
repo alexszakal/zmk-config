@@ -9,72 +9,77 @@
 
 #include "hun_keys.h"
 
+#define NAVLYR 1
+#define NUMLYR 2
+#define SYMLYR 3
+#define FUNLYR 6
+
 / {
 ///////////////// HUNGARIAN CHARACTER COMBOS //////////////////////////////
         combos {  // ÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁ
             compatible = "zmk,combos";
-            combo_a_acute {
-                timeout-ms = <50>;
-                key-positions = <13 14>;
-                layers = <0>;
-                bindings = <&hu_a_acute>;
-            };
-
-            combo_e_acute {  // ÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉ
-                timeout-ms = <50>;
-                key-positions = <3 4>;
-                layers = <0>;
-                bindings = <&hu_e_acute>;
-            };
-
-            combo_i_acute {  // ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
-                timeout-ms = <50>;
-                key-positions = <8 9>;
-                layers = <0>;
-                bindings = <&hu_i_acute>;
-            };
-
-            combo_o_acute { // ÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓ
-                timeout-ms = <50>;
-                key-positions = <9 10>;
-                layers = <0>;
-                bindings = <&hu_o_acute>;
-            };
-
-            combo_o_umlaut { // ÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖ
-                timeout-ms = <50>;
-                key-positions = <9 19>;
-                layers = <0>;
-                bindings = <&hu_o_umlaut>;
-            };
-
-            combo_o_dblacute { // ŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐ
-                timeout-ms = <50>;
-                key-positions = <9 21>;
-                layers = <0>;
-                bindings = <&hu_o_dblacute>;
-            };
-
-            combo_u_acute { // ÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚ
-                timeout-ms = <50>;
-                key-positions = <7 8>;
-                layers = <0>;
-                bindings = <&hu_u_acute>;
-            };
-
-            combo_u_umlaut { // ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-                timeout-ms = <50>;
-                key-positions = <7 21>;
-                layers = <0>;
-                bindings = <&hu_u_umlaut>;
-            };
-
-            combo_u_dblacute { // ŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰ
-                timeout-ms = <50>;
-                key-positions = <7 19>;
-                layers = <0>;
-                bindings = <&hu_u_dblacute>;
-            };
+        //     combo_a_acute {
+        //         timeout-ms = <50>;
+        //         key-positions = <13 14>;
+        //         layers = <0>;
+        //         bindings = <&hu_a_acute>;
+        //     };
+        //
+        //     combo_e_acute {  // ÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉ
+        //         timeout-ms = <50>;
+        //         key-positions = <3 4>;
+        //         layers = <0>;
+        //         bindings = <&hu_e_acute>;
+        //     };
+        //
+        //     combo_i_acute {  // ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+        //         timeout-ms = <50>;
+        //         key-positions = <8 9>;
+        //         layers = <0>;
+        //         bindings = <&hu_i_acute>;
+        //     };
+        //
+        //     combo_o_acute { // ÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓ
+        //         timeout-ms = <50>;
+        //         key-positions = <9 10>;
+        //         layers = <0>;
+        //         bindings = <&hu_o_acute>;
+        //     };
+        //
+        //     combo_o_umlaut { // ÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖ
+        //         timeout-ms = <50>;
+        //         key-positions = <9 19>;
+        //         layers = <0>;
+        //         bindings = <&hu_o_umlaut>;
+        //     };
+        //
+        //     combo_o_dblacute { // ŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐ
+        //         timeout-ms = <50>;
+        //         key-positions = <9 21>;
+            //     layers = <0>;
+            //     bindings = <&hu_o_dblacute>;
+            // };
+            //
+            // combo_u_acute { // ÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚ
+            //     timeout-ms = <50>;
+            //     key-positions = <7 8>;
+            //     layers = <0>;
+            //     bindings = <&hu_u_acute>;
+            // };
+            //
+            // combo_u_umlaut { // ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
+            //     timeout-ms = <50>;
+            //     key-positions = <7 21>;
+            //     layers = <0>;
+            //     bindings = <&hu_u_umlaut>;
+            // };
+            //
+            // combo_u_dblacute { // ŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰ
+            //     timeout-ms = <50>;
+            //     key-positions = <7 19>;
+            //     layers = <0>;
+            //     bindings = <&hu_u_dblacute>;
+            // };
 /////////////////  SOFT OFF  //////////////////////////////
             combo_soft_off { // Soft off
                 timeout-ms = <50>;
@@ -126,6 +131,15 @@
                 bindings = <&out OUT_TOG>, <&out OUT_USB>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             }; 
+
+            osl_mo: osl_mo {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                tapping-term-ms = <260>;
+                quick-tap-ms = <200>;
+                flavor = "hold-preferred";
+                bindings = <&mo>, <&sl>;
+            };
         };
 
         keymap {
@@ -134,14 +148,14 @@
                 default_layer {  //LAYER 0
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// |  SYM |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | ESC | SPC | TAB |   | ENT | BKSP  | DEL |
                         bindings = <
-   &kp TAB     &kp Q            &kp W         &kp E          &kp R       &kp T             &kp Y      &kp U            &kp I          &kp O              &kp P       &kp BSPC
-   &kp LCTRL   &phm LGUI A   &bhm LALT S   &bhm LCTRL D      &kp F       &kp G             &kp H   &bhm RSHIFT J    &bhm RCTRL K    &bhm RALT L     &phm LGUI SEMI   &kp SQT
-   &kp LSHFT   &kp Z            &kp X         &kp C          &kp V       &kp B             &kp N      &kp M          &kp COMMA        &kp DOT          &kp FSLH      &kp ESC
-                  &ltc 4 ESC  &ltc 1 SPC  &ltc 2 TAB                                        &ltc 3 RET &ltc 5 BSPC &ltc 6 DEL
+   &none                    &kp Q    &kp W         &kp E         &kp R    &kp T           &kp Y    &kp U           &kp I              &kp O    &kp P       &kp DEL
+   &osl_mo SYMLYR SYMLYR    &kp A    &kp S         &kp D         &kp F    &kp G           &kp H    &kp J           &kp K              &kp L    &kp SEMI    &osl_mo SYMLYR SYMLYR
+   &kp LSHFT                &kp Z    &bhm LGUI X   &bhm LALT C   &kp V    &kp B           &kp N    &bhm LCTRL M    &bhm LALT COMMA    &kp DOT  &kp FSLH    &ltc FUNLYR MINUS
+                        &kp LCTRL  &ltc NAVLYR SPC  &ltc NUMLYR TAB                                        &kp RET   &kp BSPC &kp RSHFT
                         >;
                 };
 
