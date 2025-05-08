@@ -195,10 +195,10 @@
 // | SHFT |  $  |  *  |  {  |  }  |  :   |||    |        |       |      |      | ESC  |
 //                 |  #  |  +  |  !  |              |  |   |   |
                         bindings = <
-   &kp  TAB    &kp TILDE   &kp DOUBLE_QUOTES  &kp LBKT  &kp RBKT     &kp PIPE           &none   &none        &none     &none     &none    &kp BSPC
-   &kp LCTRL    &kp AT     &kp CARET          &kp LPAR  &kp RPAR    &kp UNDER           &none &kp LSHIFT   &kp LCTRL  &kp LALT  &kp LGUI  &kp GRAVE
-   &kp LSHFT  &kp DOLLAR   &kp SINGLE_QUOTE   &kp LBRC  &kp RBRC  &kp AMPERSAND         &none   &none        &none     &none     &none    &kp TILDE
-                      &kp HASH &kp BACKSLASH    &kp EXCLAMATION                                  &none  &none   &none
+   &none    &kp BSLH         &hu_e_acute         &kp LBRC    &kp RBRC     &kp APOSTROPHE              &kp TILDE        &hu_u_acute       &hu_i_acute    &hu_o_acute       &kp GRAVE          &kp DEL
+   &none    &hu_a_acute      &kp DOLLAR          &kp LPAR    &kp RPAR     &kp DOUBLE_QUOTES           &kp HASH         &hu_u_umlaut      &none          &hu_o_umlaut      &kp EXCLAMATION    &none
+   &kp LSHFT    &kp LESS_THAN    &kp GREATER_THAN    &kp LBKT    &kp RBKT     &kp AT_SIGN             &kp AMPERSAND    &hu_u_dblacute    &none          &hu_o_dblacute    &kp QUESTION       &none
+                                              &kp LCTRL   &kp SPC    &kp TAB                                 &kp RET  &kp BSPC   &kp LSHFT
                         >;
                 };
 
