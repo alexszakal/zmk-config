@@ -96,6 +96,45 @@
         };
 ///////////////////////////////////////////////////////////////////////////
 
+        macros {
+            back_word: back_word{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_press &kp LCTRL>
+                    , <&macro_tap &kp BKSP>
+                    , <&macro_release &kp LCTRL>
+                ;
+            }; 
+            del_word: del_word{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_press &kp LCTRL>
+                    , <&macro_tap &kp DEL>
+                    , <&macro_release &kp LCTRL>
+                ;
+            }; 
+            jmp_nxt_word: jmp_nxt_word{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_press &kp LCTRL>
+                    , <&macro_tap &kp RIGHT>
+                    , <&macro_release &kp LCTRL>
+                ;
+            }; 
+            jmp_prev_word: jmp_prev_word{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_press &kp LCTRL>
+                    , <&macro_tap &kp LEFT>
+                    , <&macro_release &kp LCTRL>
+                ;
+            }; 
+        };
+        
         behaviors {
             bhm: balanced_homerow_mods {
                 compatible = "zmk,behavior-hold-tap";
@@ -173,10 +212,10 @@
 // | SHFT |      |      |       |        |   |||  HOME | PGDOWN | PGUP |  END  |  INSERT |  ~   |
 //                    | ESC |     | TAB |            | ENT | BKSP | DEL |
                         bindings = <
-   &kp  TAB  &none       &none     &none      &none     &none          &kp K_REDO  &kp K_PASTE   &kp COPY   &kp CUT   &kp K_UNDO   &kp BSPC
-   &kp LCTRL &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHIFT  &none           &kp LEFT    &kp DOWN      &kp UP   &kp RIGHT   &kp LCAPS    &kp GRAVE
-   &kp LSHFT  &none      &none     &none      &none     &none           &kp HOME    &kp PG_DN    &kp PG_UP  &kp END    &kp INS     &kp TILDE
-                  &kp ESC &none   &kp TAB                                       &kp RET   &kp BSPC    &kp DEL
+   &none    &none        &none         &none          &none      &none           &back_word         &kp PAGE_UP    &kp PAGE_DOWN    &del_word        &none        &none
+   &none    &kp HOME     &none         &none          &kp END    &none           &kp LEFT           &kp DOWN       &kp UP           &kp RIGHT        &kp LCAPS    &kp GRAVE
+   &none    &kp K_CUT    &kp K_COPY    &kp K_PASTE    &none      &none           &jmp_prev_word     &none          &none            &jmp_nxt_word    &none        &none
+                               &none &none   &none                                       &none   &none    &none
                         >;
                 };
 
