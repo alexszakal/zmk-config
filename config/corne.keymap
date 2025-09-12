@@ -152,7 +152,7 @@
                         bindings = <
    &none    &none        &none         &none          &none      &none           &back_word         &kp PAGE_UP    &kp PAGE_DOWN    &del_word        &none        &none
    &none    &kp HOME     &none         &none          &kp END    &none           &kp LEFT           &kp DOWN       &kp UP           &kp RIGHT        &kp LCAPS    &kp GRAVE
-   &none    &kp K_CUT    &kp K_COPY    &kp K_PASTE    &none      &none           &jmp_prev_word     &none          &none            &jmp_nxt_word    &none        &none
+   &none    &kp K_CUT    &kp K_COPY    &kp K_PASTE    &none      &none           &jmp_prev_word     &none          &none            &jmp_nxt_word     &none        &none
                                &none &none   &none                                       &none   &none    &none
                         >;
                 };
