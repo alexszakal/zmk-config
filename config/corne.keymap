@@ -18,68 +18,6 @@
 ///////////////// HUNGARIAN CHARACTER COMBOS //////////////////////////////
         combos {  // ÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁ
             compatible = "zmk,combos";
-        //     combo_a_acute {
-        //         timeout-ms = <50>;
-        //         key-positions = <13 14>;
-        //         layers = <0>;
-        //         bindings = <&hu_a_acute>;
-        //     };
-        //
-        //     combo_e_acute {  // ÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉÉ
-        //         timeout-ms = <50>;
-        //         key-positions = <3 4>;
-        //         layers = <0>;
-        //         bindings = <&hu_e_acute>;
-        //     };
-        //
-        //     combo_i_acute {  // ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
-        //         timeout-ms = <50>;
-        //         key-positions = <8 9>;
-        //         layers = <0>;
-        //         bindings = <&hu_i_acute>;
-        //     };
-        //
-        //     combo_o_acute { // ÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓÓ
-        //         timeout-ms = <50>;
-        //         key-positions = <9 10>;
-        //         layers = <0>;
-        //         bindings = <&hu_o_acute>;
-        //     };
-        //
-        //     combo_o_umlaut { // ÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖÖ
-        //         timeout-ms = <50>;
-        //         key-positions = <9 19>;
-        //         layers = <0>;
-        //         bindings = <&hu_o_umlaut>;
-        //     };
-        //
-        //     combo_o_dblacute { // ŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐŐ
-        //         timeout-ms = <50>;
-        //         key-positions = <9 21>;
-            //     layers = <0>;
-            //     bindings = <&hu_o_dblacute>;
-            // };
-            //
-            // combo_u_acute { // ÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚÚ
-            //     timeout-ms = <50>;
-            //     key-positions = <7 8>;
-            //     layers = <0>;
-            //     bindings = <&hu_u_acute>;
-            // };
-            //
-            // combo_u_umlaut { // ÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜÜ
-            //     timeout-ms = <50>;
-            //     key-positions = <7 21>;
-            //     layers = <0>;
-            //     bindings = <&hu_u_umlaut>;
-            // };
-            //
-            // combo_u_dblacute { // ŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰŰ
-            //     timeout-ms = <50>;
-            //     key-positions = <7 19>;
-            //     layers = <0>;
-            //     bindings = <&hu_u_dblacute>;
-            // };
 /////////////////  SOFT OFF  //////////////////////////////
             combo_soft_off { // Soft off
                 timeout-ms = <50>;
@@ -241,7 +179,7 @@
 //                 |  #  |  +  |  !  |              |  |   |   |
                         bindings = <
    &none    &kp BSLH         &hu_e_acute         &kp LBRC    &kp RBRC     &kp APOSTROPHE              &kp TILDE        &hu_u_acute       &hu_i_acute    &hu_o_acute       &kp GRAVE          &kp DEL
-   &none    &hu_a_acute      &kp DOLLAR          &kp LPAR    &kp RPAR     &kp DOUBLE_QUOTES           &kp HASH         &hu_u_umlaut      &none          &hu_o_umlaut      &kp EXCLAMATION    &none
+   &none    &hu_a_acute      &kp DOLLAR          &kp LPAR    &kp RPAR     &kp DOUBLE_QUOTES           &kp HASH         &hu_u_umlaut      &kp PIPE       &hu_o_umlaut      &kp EXCLAMATION    &none
    &kp LSHFT    &kp LESS_THAN    &kp GREATER_THAN    &kp LBKT    &kp RBKT     &kp AT_SIGN             &kp AMPERSAND    &hu_u_dblacute    &none          &hu_o_dblacute    &kp QUESTION       &none
                                               &kp LCTRL   &kp SPC    &kp TAB                                 &kp RET  &kp BSPC   &kp LSHFT
                         >;
