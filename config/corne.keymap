@@ -12,6 +12,7 @@
 #define NAVLYR 1
 #define NUMLYR 2
 #define SYMLYR 3
+#define TMUXLYR 4
 #define FUNLYR 6
 
 / {
@@ -35,6 +36,17 @@
 ///////////////////////////////////////////////////////////////////////////
 
         macros {
+            tmuxWin: tmuxWin{
+                compatible = "zmk,behavior-macro-one-param";
+                #binding-cells = <1>;
+                bindings
+                    = <&macro_press &kp LCTRL>
+                    , <&macro_tap &kp A>
+                    , <&macro_release &kp LCTRL>
+                    , <&macro_param_1to1>
+                    , <&macro_tap &kp MACRO_PLACEHOLDER>
+                ;
+            }; 
             back_word: back_word{
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
@@ -152,7 +164,7 @@
                         bindings = <
    &none    &none        &none         &none          &none      &none           &back_word         &kp PAGE_UP    &kp PAGE_DOWN    &del_word        &none        &none
    &none    &kp HOME     &none         &none          &kp END    &none           &kp LEFT           &kp DOWN       &kp UP           &kp RIGHT        &kp LCAPS    &kp GRAVE
-   &none    &kp K_CUT    &kp K_COPY    &kp K_PASTE    &none      &none           &jmp_prev_word     &none          &none            &jmp_nxt_word     &none        &none
+   &none    &kp K_CUT    &kp K_COPY    &kp K_PASTE    &tmuxWin N1      &none           &jmp_prev_word     &none          &none            &jmp_nxt_word     &none        &none
                                &none &none   &none                                       &none   &none    &none
                         >;
                 };
@@ -221,7 +233,7 @@
 //                 |  #  |  +  |  !  |              |  |   |   |
                         bindings = <
    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6           &kp F7    &kp F8    &kp F9    &kp F10    &kp F11    &kp F12
-   &none     &none     &none     &none     &none     &none            &none     &none     &none     &none      &none      &none
+   &none     &none     &none     &none     &none     &none            &tmuxWin N0     &tmuxWin N1     &tmuxWin N2     &tmuxWin N4      &tmuxWin N5      &none
    &none     &none     &none     &none     &none     &none            &none     &none     &none     &none      &none      &none
                                  &none   &none   &none                    &none  &none   &none
                         >;
