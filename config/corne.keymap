@@ -36,6 +36,16 @@
 ///////////////////////////////////////////////////////////////////////////
 
         macros {
+            deskNum: deskNum{
+                compatible = "zmk,behavior-macro-one-param";
+                #binding-cells = <1>;
+                bindings
+                    = <&macro_press &kp LALT>
+                    , <&macro_param_1to1>
+                    , <&macro_tap &kp MACRO_PLACEHOLDER>
+                    , <&macro_release &kp LALT>
+                ;
+            }; 
             tmuxWin: tmuxWin{
                 compatible = "zmk,behavior-macro-one-param";
                 #binding-cells = <1>;
@@ -232,9 +242,9 @@
 // | SHFT |  F10  |  F1  |  F2  |  F3  | PAUSE     |||    |        |       |      |      | ESC  |
 //                 |  #  |  +  |  !  |              |  |   |   |
                         bindings = <
-   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6           &kp F7    &kp F8    &kp F9    &kp F10    &kp F11    &kp F12
-   &none     &none     &none     &none     &none     &none            &tmuxWin N0     &tmuxWin N1     &tmuxWin N2     &tmuxWin N4      &tmuxWin N5      &none
-   &none     &none     &none     &none     &none     &none            &none     &none     &none     &none      &none      &none
+   &kp F1    &kp F2         &kp F3       &kp F4      &kp F5     &kp F6           &kp F7          &kp F8     &kp F9      &kp F10     &kp F11     &kp F12
+   &none     &deskNum N1  &deskNum N2 &deskNum N3 &deskNum N4 &deskNum N5      &tmuxWin N0  &tmuxWin N1  &tmuxWin N2  &tmuxWin N4  &tmuxWin N5  &none
+   &none     &deskNum N6  &deskNum N7 &deskNum N8 &deskNum N9 &none               &none           &none     &none       &none       &none       &none
                                  &none   &none   &none                    &none  &none   &none
                         >;
                 };
