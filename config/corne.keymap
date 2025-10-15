@@ -17,7 +17,7 @@
 
 / {
 ///////////////// HUNGARIAN CHARACTER COMBOS //////////////////////////////
-        combos {  // ÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁÁ
+        combos {
             compatible = "zmk,combos";
 /////////////////  SOFT OFF  //////////////////////////////
             combo_soft_off { // Soft off
@@ -31,6 +31,12 @@
                 key-positions = <19 20>;
                 layers = <0>;
                 bindings = <&kp ESC>;
+            };
+            combo_printScreen { // Printscreen for ESC+Q
+                timeout-ms = <50>;
+                key-positions = <0 1>;
+                layers = <0>;
+                bindings = <&kp PRINTSCREEN>;
             };
         };
 ///////////////////////////////////////////////////////////////////////////
