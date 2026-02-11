@@ -192,23 +192,23 @@
 // | SHFT |      |      |       |        |   |||    PERCENT | N1 | N2 | N3 |  EQUAL   |  ~   |
 //                    | ESC |     |    |              | PERIOD | N0 | MINUS |
                         bindings = <
-   &none    &none    &none    &none    &none    &none          &kp SLASH      &kp N7  &kp N8  &kp N9    &kp MINUS    &none
-   &none    &none    &none    &none    &none    &none          &kp STAR       &kp N4  &kp N5  &kp N6    &kp PLUS     &none
-   &none    &none    &none    &none    &none    &none          &kp PERCENT    &kp N1  &kp N2  &kp N3    &kp EQUAL    &none
+   &none    &none    &none    &none    &none      &kp MINUS          &kp SLASH      &kp N7  &kp N8  &kp N9    &kp MINUS    &none
+   &none    &none    &none    &none    &none      &kp PLUS           &kp STAR       &kp N4  &kp N5  &kp N6    &kp PLUS     &none
+   &none    &none    &none    &none    &kp CARET  &kp EQUAL          &kp PERCENT    &kp N1  &kp N2  &kp N3    &kp EQUAL    &none
                            &none   &none   &none                         &kp RET   &kp N0   &kp PERIOD
                         >;
                 };
 
                 sym_layer {  //LAYER 3
 // -----------------------------------------------------------------------------------------
-// |  TAB |  ~  |     |  [  |  ]  |  |   |||    |        |       |      |      | BKSP |
-// | CTRL |  @  |  ^  |  (  |  )  |  _   |||    | LSHIFT | LCTRL | LALT | LGUI | `'   |
-// | SHFT |  $  |  *  |  {  |  }  |  :   |||    |        |       |      |      | ESC  |
+// | none  |  \  |  é  |  {  |  }  |  '  |||  ~  |  ú  |  í  |  ó  |  `  | DEL |
+// | none  |  á  |  á  |  (  |  )  |  "  |||  #  |  ü  |  |  |  ö  |  !  |     |
+// | LSHFT |  <  |  >  |  [  |  ]  |  @  |||  &  |  ű  | none|  ő  |  ?  | none|
 //                 |  #  |  +  |  !  |              |  |   |   |
                         bindings = <
-   &none    &kp BSLH         &hu_e_acute         &kp LBRC    &kp RBRC     &kp APOSTROPHE              &kp TILDE        &hu_u_acute       &hu_i_acute    &hu_o_acute       &kp GRAVE          &kp DEL
-   &none    &hu_a_acute      &kp DOLLAR          &kp LPAR    &kp RPAR     &kp DOUBLE_QUOTES           &kp HASH         &hu_u_umlaut      &kp PIPE       &hu_o_umlaut      &kp EXCLAMATION    &none
-   &kp LSHFT    &kp LESS_THAN    &kp GREATER_THAN    &kp LBKT    &kp RBKT     &kp AT_SIGN             &kp AMPERSAND    &hu_u_dblacute    &none          &hu_o_dblacute    &kp QUESTION       &none
+   &none    &kp BSLH         &hu_e_acute         &kp LBRC    &kp RBRC     &kp APOSTROPHE          &kp TILDE        &hu_u_acute       &hu_i_acute    &hu_o_acute       &kp GRAVE          &kp DEL
+   &none    &hu_a_acute      &kp DOLLAR          &kp LPAR    &kp RPAR     &kp DOUBLE_QUOTES       &kp HASH         &hu_u_umlaut      &kp PIPE       &hu_o_umlaut      &kp EXCLAMATION    &none
+ &kp LSHFT  &kp LESS_THAN    &kp GREATER_THAN    &kp LBKT    &kp RBKT     &kp AT_SIGN              &kp AMPERSAND    &hu_u_dblacute    &none          &hu_o_dblacute    &kp QUESTION       &none
                                               &kp LCTRL   &kp SPC    &kp TAB                                 &kp RET  &kp BSPC   &kp LSHFT
                         >;
                 };
@@ -243,14 +243,14 @@
 
                 fun_layer {  //LAYER 6
 // -----------------------------------------------------------------------------------------
-// |  TAB |  F12  |  F7  |  F8  |  F9  | PrtScr    |||    |        |       |      |      | BKSP |
-// | CTRL |  F11  |  F4  |  F5  |  F6  | ScrLck    |||    | LSHIFT | LCTRL | LALT | LGUI | `'   |
-// | SHFT |  F10  |  F1  |  F2  |  F3  | PAUSE     |||    |        |       |      |      | ESC  |
-//                 |  #  |  +  |  !  |              |  |   |   |
+// |  F1  |    F2    |    F3    |    F4    |    F5    |    F6    |||    F7    |    F8    |    F9    |    F10   |    F11   | F12 |
+// |      | DeskNum1 | DeskNum2 | DeskNum3 | DeskNum4 | DeskNum5 ||| TmuxWin0 | TmuxWin1 | TmuxWin2 | TmuxWin3 | TmuxWin4 |     |
+// |      | DeskNum6 | DeskNum7 | DeskNum8 | DeskNum9 |          ||| TmuxWin5 | TmuxWin6 | TmuxWin7 | TmuxWin8 | TmuxWin9 |     |
+//                 |    |    |    |              |  |   |   |
                         bindings = <
    &kp F1    &kp F2         &kp F3       &kp F4      &kp F5     &kp F6           &kp F7          &kp F8     &kp F9      &kp F10     &kp F11     &kp F12
-   &none     &deskNum N1  &deskNum N2 &deskNum N3 &deskNum N4 &deskNum N5      &tmuxWin N0  &tmuxWin N1  &tmuxWin N2  &tmuxWin N4  &tmuxWin N5  &none
-   &none     &deskNum N6  &deskNum N7 &deskNum N8 &deskNum N9 &none               &none           &none     &none       &none       &none       &none
+   &none     &deskNum N1  &deskNum N2 &deskNum N3 &deskNum N4 &deskNum N5      &tmuxWin N0  &tmuxWin N1  &tmuxWin N2  &tmuxWin N3  &tmuxWin N4  &none
+   &none     &deskNum N6  &deskNum N7 &deskNum N8 &deskNum N9 &none            &tmuxWin N5  &tmuxWin N5  &tmuxWin N5  &tmuxWin N5  &tmuxWin N5  &none
                                  &none   &none   &none                    &none  &none   &none
                         >;
                 };
