@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
-
+ 
 #define HOST_OS 1 //This must be before the include of zmk-helpers
 #include <zmk-helpers/helper.h>
 
@@ -219,7 +219,7 @@
                         bindings = <
    &none    &kp BSLH         &hu_e_acute         &kp LBRC    &kp RBRC     &kp APOSTROPHE          &kp TILDE        &hu_u_acute       &hu_i_acute    &hu_o_acute       &kp GRAVE          &kp DEL
    &none    &hu_a_acute      &kp DOLLAR          &kp LPAR    &kp RPAR     &kp DOUBLE_QUOTES       &kp HASH         &hu_u_umlaut      &kp PIPE       &hu_o_umlaut      &kp EXCLAMATION    &none
- &kp LSHFT  &kp LESS_THAN    &kp GREATER_THAN    &kp LBKT    &kp RBKT     &kp AT_SIGN              &kp AMPERSAND    &hu_u_dblacute    &none          &hu_o_dblacute    &kp QUESTION       &none
+ &kp LSHFT  &kp LESS_THAN    &kp GREATER_THAN    &kp LBKT    &kp RBKT     &kp AT_SIGN              &kp AMPERSAND    &hu_u_dblacute    &kp CARET          &hu_o_dblacute    &kp QUESTION       &none
                                               &kp LCTRL   &kp SPC    &kp TAB                                 &kp RET  &kp BSPC   &kp LSHFT
                         >;
                 };
